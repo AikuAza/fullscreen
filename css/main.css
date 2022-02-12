@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  background-color: #1d1c27;
+  color: #fff;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.header {
+  color: #fff;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.header__bc {
+  z-index: 3;
+  min-height: 100vh;
+  background: url("../img/02bc.jpg") center/cover no-repeat fixed;
+}
+.hader__video-bc {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.header__body {
+  background-color: rgba(0, 0, 0, 0.445);
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__title,
+.header__subtitle,
+.header__button {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.header__title {
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0 0 25px 0;
+  font-weight: 700;
+}
+.header__subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  letter-spacing: 3px;
+  margin: 0 0 25px 0;
+  font-weight: 400;
+}
+.header__button {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+  position: relative;
+  border-radius: 4px;
+  top: 0;
+  box-shadow: 0px 10px 15px #000;
+  transition: all 0.3s linear;
+}
+.header__button:hover {
+  box-shadow: 0px 2px 2px #000;
+  top: 3px;
+}
+.header__link {
+  letter-spacing: 2px;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background-color: rgb(131, 97, 58);
+  line-height: 50px;
+  padding: 0 30px;
+
+  transition: all 0.3s ease;
+}
+.header__link:hover {
+  background-color: rgb(92, 124, 112);
+}
+
+.main {
+  z-index: 3;
+  min-height: 100vh;
+  text-align: center;
+  color: #000;
+  background-color: #617a7a;
+}
+.main__title {
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 80px 0 25px 0;
+  font-weight: 700;
+}
+.main__title-3d {
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 80px 0 25px 0;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
+.main__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main__picture {
+  background-color: #fff;
+  flex: 0 1 49%;
+  height: 350px;
+  margin: 10px 0;
+}
+
+.main__picture-07 {
+  flex: 1 1 99%;
+  height: 350px;
+}
+
+.main__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1.2s ease;
+}
+
+.main__picture-02 {
+  overflow: hidden;
+}
+
+/*__________________________TRANSLATE____________________*/
+.main__img-01:hover {
+  transform: translate(20%, 20px);
+}
+
+/*__________________________SCALE____________________*/
+.main__img-02:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/*__________________________SCALE____________________*/
+.main__img-03:hover {
+  transform: scale(-1, 1);
+}
+
+/*__________________________ROTATE____________________*/
+.main__img-04:hover {
+  transform: rotate(180deg);
+}
+
+/*__________________________SKEW____________________*/
+.main__img-05:hover {
+  transform: skew(-50deg, -20deg);
+}
+
+/*__________________________MATRIX____________________*/
+.main__img-06:hover {
+  transform: matrix(0.7, 0.2, 0.3, 0.7, 50, 30);
+}
+
+/*__________________________TRANSFORM-ORIGIN____________________*/
+.main__img-07 {
+  transform-origin: top left;
+}
+.main__img-07:hover {
+  transform: rotate(-15deg);
+}
+
+/*__________________________PERSPECTIVE-ORIGIN____________________*/
+.main__picture-transform3d {
+  height: 350px;
+  width: 400px;
+  background-color: rgba(43, 70, 88, 0.479);
+
+  perspective-origin: center;
+}
+
+/*__________________________ROTATE-X____________________*/
+
+.main__img-08:hover {
+  transform: perspective(400px) rotateX(30deg);
+}
+
+/*__________________________TRANSLATE-3D____________________*/
+.main__img-09:hover {
+  transform: perspective(400px) translate3d(-70px, -70px, 50px);
+}
+
+/*__________________________ROTATE-3D____________________*/
+.main__img-10:hover {
+  transform: perspective(400px) rotate3d(1, 1, 2, 45deg);
+}
+
+/*__________________________TRANSFORM-3D--A-LOT-OF____________________*/
+.main__img-11:hover {
+  transform: perspective(400px) translate3d(-100px, -100px, 50px)
+    rotate3d(-1, 0, 1, -30deg);
+}
+
+/*__________________________TRANSFORM-STYLE____________________*/
+.main__picture-transform3d-style {
+  transform-style: preserve-3d;
+}
+.main__img-12:hover {
+  transform: perspective(400px) rotateY(30deg);
+}
+
+.main__picture-backface-visibility {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  transform-style: preserve-3d;
+  transition: all 1.2s ease;
+}
+.main__img-13 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  transform: rotateY(180deg);
+}
+.main__img-14 {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transform: rotateY(0deg);
+
+  backface-visibility: hidden;
+}
+
+.main__picture-backface-visibility:hover {
+  transform: rotateY(180deg);
+}
+
+.main__flip {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+.flip__block {
+  width: 400px;
+  height: 400px;
+
+  position: relative;
+
+  top: 0;
+  left: 0;
+  transition: all 1.5s ease;
+  transform-style: preserve-3d;
+}
+.flip__font,
+.flip__back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.flip__font {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: rgba(255, 255, 255, 0.733);
+  color: #000;
+
+  backface-visibility: hidden;
+}
+.flip__back {
+  background-color: rgba(0, 0, 0, 0.719);
+  color: #fff;
+  transform: rotateY(-180deg);
+
+  backface-visibility: hidden;
+}
+.flip__block:hover {
+  transform: rotateY(-180deg);
+}
